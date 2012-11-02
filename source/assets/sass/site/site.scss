@@ -1,0 +1,125 @@
+/* User Access Section */
+
+$border-color: #eee;
+
+/* Social */
+
+.zocial{
+  min-width:175px;
+}
+
+/* Access Screen */
+
+.content{  
+  background:#fff;
+  padding:$base-margin;
+  @include box-shadow(0px 0px 3px rgba(0,0,0,0.3));
+  @include border-radius();
+  margin:0 auto $base-margin*2 auto;
+}
+
+.access{
+  width:600px;
+
+  .row{
+    max-width:auto;
+    min-width:0;
+  }
+  
+  > .row > .columns{
+    border-left:1px $border-color solid;
+  }
+  
+  > .row > .columns:first-child{
+    border-left:none;
+  }
+  
+  h2{
+    text-align:center;
+    padding-bottom:0.5em;
+  }
+  
+  h3{
+    font-size:ms(1);
+    margin-bottom:$base-margin;
+    color:#444;
+  }
+  
+  p{
+    margin-bottom:1em;
+  }
+  
+  @include respond-to(mobile){
+    width:auto;
+    margin-left:15px;
+    margin-top:15px;
+    margin-right:15px;
+    padding-left:0;
+    padding-right:0;
+    
+    h3{
+      margin-bottom:15px;
+    }
+    
+    > .row > .columns{
+      border:none;
+    }
+    > .row > .columns:first-child{
+      border-bottom:1px $border-color solid;
+      margin-bottom:$base-margin;
+    }
+    
+  }
+  
+  .forgot{
+    font-size:0.9em;
+  }  
+  
+}
+
+/* Branding */
+
+#Branding{
+  border-bottom:1px #ddd solid;
+  background:#fff;
+  padding:5px 0;
+  overflow:hidden;
+  margin-bottom:30px;
+  
+  ul{float:right; margin:0 0 0 1em; padding:1em 2em;}
+  li{display:inline; margin-left:1em;}
+}
+
+/* Post a Job */
+
+.jobtypes{
+  list-style:none;
+  padding:0 0 $base-margin 0;
+  margin:0;
+  overflow:hidden;
+  width:65%;
+  
+  > li{
+    @include box-sizing(border-box);
+    width:25%;
+    
+    float:left;
+    border:1px #eee solid;
+  }
+  label{
+    padding:20px;
+  }
+}
+
+
+/* Footer */
+
+footer{
+  border-top:1px #ddd solid;
+  padding:2em 2em;
+  text-align:center;
+}
+
+.copy{
+  color:#888;
+}

@@ -1,0 +1,20 @@
+html{
+  font: $base-font-size-em/#{$base-line-height} $base-font-family;
+  color: $base-color;
+  overflow-y:scroll;
+  background: if($body-background, $body-background, #fff );
+}
+
+body{
+	font-size: 100%;
+}
+
+.push-right{
+	float: right;
+	margin: 0 0 $base-margin $base-margin;
+}
+
+.push-left{
+	float: left;
+	margin: 0 $base-margin $base-margin 0;
+}

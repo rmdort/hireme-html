@@ -1,0 +1,52 @@
+/* Headings */
+
+h1, h2, h3, h4, h5, h6{
+  margin:0 0 0.5em 0;
+  font-family: $header-font-family;
+  font-weight: $header-font-weight;
+  line-height:1.2;
+}
+
+p{
+  &+h1, &+h2, &+h3, &+h4, &+h5, &+h6{
+    padding-top:$base-margin/2;
+  }
+}
+
+h1{
+  font-size: ms(5, $base-size, $ratio);
+  color: $h1-color;
+}
+
+h2{
+  font-size: ms(4, $base-size, $ratio);
+  color: $h2-color;
+}
+
+h3{
+  font-size: ms(3, $base-size, $ratio);
+  color: $h3-color;
+}
+
+h4{
+  font-size: ms(2, $base-size, $ratio);
+  color: $h4-color;
+}
+
+h5{
+  font-size: ms(1, $base-size, $ratio);
+  color: $h5-color;
+}
+
+h6{
+  font-size: ms(0, $base-size, $ratio);
+  color: $h6-color;
+}
+
+
+
+/* Paragraph */
+
+p{
+  margin:0 0 $base-margin 0;
+}
