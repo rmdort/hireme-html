@@ -3,3 +3,8 @@ $base-font-family: "Asap", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans
 $header-font-family: "Archivo Narrow", "PT Sans Narrow", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $header-font-weight: normal;
 $base-margin: 1.5em;
+
+$link-color: #444;
+$link-hover-color: adjust_lightness($link-color, -20%);
+$link-active-color: $link-color;
+$link-visited-color: $link-color;

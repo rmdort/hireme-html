@@ -2,6 +2,14 @@
 
 $border-color: #eee;
 
+%boxedborder{
+  background:#fff;
+  padding:20px;
+  @include box-shadow(0px 0px 0px 3px #e8e8e8);
+  @include border-radius();
+  border:1px #ccc solid;
+}
+
 /* Social */
 
 .zocial{
@@ -11,11 +19,15 @@ $border-color: #eee;
 /* Access Screen */
 
 .content{  
-  background:#fff;
-  padding:$base-margin;
-  @include box-shadow(0px 0px 3px rgba(0,0,0,0.3));
-  @include border-radius();
+  
+  @extend %boxedborder;
+  
   margin:0 auto $base-margin*2 auto;
+  
+  
+  @include respond-to(mobile){
+    padding:30px 0;
+  }
 }
 
 .access{
@@ -62,10 +74,10 @@ $border-color: #eee;
       margin-bottom:15px;
     }
     
-    > .row > .columns{
+    .content > .row > .columns{
       border:none;
     }
-    > .row > .columns:first-child{
+    .content > .row > .columns:first-child{
       border-bottom:1px $border-color solid;
       margin-bottom:$base-margin;
     }
@@ -76,6 +88,10 @@ $border-color: #eee;
     font-size:0.9em;
   }  
   
+}
+
+.submit{
+  padding:2em 0;
 }
 
 /* Notice */
@@ -94,14 +110,40 @@ $border-color: #eee;
 /* Branding */
 
 #Branding{
-  border-bottom:1px #ddd solid;
+  border-bottom:1px #d1d1d1 solid;
+  @include box-shadow(0 0 0 3px #eee);
   background:#fff;
   padding:5px 0;
   overflow:hidden;
-  margin-bottom:30px;
+  margin-bottom:3em;
+  position:fixed;
+  width:100%;
+  top:0;
+  z-index: 1;
   
-  ul{float:right; margin:0 0 0 1em; padding:1em 2em;}
-  li{display:inline; margin-left:1em;}
+  ul{float:right; margin:0; padding:0 2em;}
+  li{display:inline; margin:0;}
+  
+  @include respond-to(mobile){
+    position:relative;
+  }
+  
+  li > a{
+    padding:1em;    
+    display:inline-block;
+  }
+  
+  li > a:hover{
+    background:#eee;    
+  }
+}
+
+body{
+  padding-top:95px;
+  
+  @include respond-to(mobile){
+    padding-top:0;
+  }
 }
 
 /* Post a Job */
@@ -111,7 +153,6 @@ $border-color: #eee;
   padding:0 0 $base-margin 0;
   margin:0;
   overflow:hidden;
-  width:65%;
   
   > li{
     @include box-sizing(border-box);
@@ -123,6 +164,34 @@ $border-color: #eee;
   label{
     padding:20px;
   }
+}
+
+/* Job Listing */
+
+.joblist{
+  list-style:none;  margin:0; padding-bottom:20px;
+  li{ border-bottom:1px #ddd solid; margin:0;}
+  a, a:visited{
+    padding:5px; 
+    display:block;
+    @include clearfix();
+  }
+  
+  img, .title{float:left; margin-right:20px;}
+  .type{float:right;}
+  h3{font-size:1.3em;}
+  h4{font-size:1.3em;}
+}
+
+.searchForm{  
+  @extend %boxedborder;
+  padding:20px;
+  
+  select, ul{margin:0;}
+}
+
+.intro{
+  padding-bottom:20px;
 }
 
 
