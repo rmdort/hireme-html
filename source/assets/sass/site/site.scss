@@ -20,17 +20,18 @@ $border-color: #eee;
 
 .access{
   width:600px;
+  margin:0 auto;
 
   .row{
     max-width:auto;
     min-width:0;
   }
   
-  > .row > .columns{
+  .content > .row > .columns{
     border-left:1px $border-color solid;
   }
   
-  > .row > .columns:first-child{
+  .content > .row > .columns:first-child{
     border-left:none;
   }
   
@@ -75,6 +76,19 @@ $border-color: #eee;
     font-size:0.9em;
   }  
   
+}
+
+/* Notice */
+
+.module{
+  margin-bottom:$base-margin;
+}
+
+.notice{
+  background:#8ABA42;
+  color:#fff;
+  @include border-radius();
+  padding:0.5em 1em;
 }
 
 /* Branding */
