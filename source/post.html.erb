@@ -3,128 +3,143 @@ title: Post a Job
 ---
 
 <div class="row">
-  
-  <div class="columns twelve">
-    
+
+  <div class="columns span8 form-horizontal">
+
     <h1>Post a job</h1>
-    
-    
-    <ul class="jobtypes">
-      <li><label><input type="radio" id="" name="jobtype"> Full-time</label></li>
-      <li><label><input type="radio" id="" name="jobtype"> Part-time</label></li>
-      <li><label><input type="radio" id="" name="jobtype"> Freelance</label></li>
-      <li><label><input type="radio" id="" name="jobtype"> Internship</label></li>
-    </ul>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
 
-    <dl class="form row">
-      <dt class="columns three">
-        <label for="JobTitle">Job Category</label>
-      </dt>
-      <dd class="columns nine">
-        <select class="job_cat" id="job_term_cat" name="job_term_cat"><option value="">Select a category…</option>
-        	<option value="86" class="level-0">Back-end Development</option>
-        	<option value="88" class="level-0">Content Strategy</option>
-        	<option value="85" class="level-0">Front-end Development</option>
-        	<option value="87" class="level-0">Information Architecture</option>
-        	<option value="89" class="level-0">Management</option>
-        	<option value="89" class="level-0">Accounting</option>
-        	<option value="84" class="level-0">Software Development</option>
-        	<option value="80" class="level-0">Web design</option>
-        </select>         
-      </dd>
-    </dl>
+    <fieldset>
+      <legend>Job Details</legend>
 
-    <dl class="form row">
-      <dt class="columns three">
-        <label for="JobTitle">Job Title</label>
-      </dt>
-      <dd class="columns nine">
-        <input type="text" id="JobTitle">
-      </dd>
-    </dl>
-
-    <dl class="form row">
-      <dt class="columns three">
-        <label for="JobTitle">Job Description</label>
-      </dt>
-      <dd class="columns nine">
-        <textarea id="" cols="30" rows="10"></textarea>
-      </dd>
-    </dl>
-
-    <dl class="form row">
-      <dt class="columns three">
-        <label for="JobTitle">How to apply</label>
-      </dt>
-      <dd class="columns nine">
-        <textarea id="" cols="30" rows="10"></textarea>
-      </dd>
-    </dl>
-
-
-    <h2>Company Details</h2>
-
-    <dl class="form row">
-      <dt class="columns three">
-        <label for="JobTitle">Company Type</label>
-      </dt>
-      <dd class="columns nine">
-        <select id="comptype" name="comptype">
-          <option value="">Choose a type...</option>
-          <option value="1">Startup</option>
-          <option value="2">Studio</option>
-          <option value="3">Small business</option>
-          <option value="4">Mid-sized business</option>
-          <option value="5">Large organization</option>
-          <option value="6">Educational institution</option>
-          <option value="7">Non-profit</option>
-        </select>
-      </dd>
-    </dl>
-
-    <dl class="form row">
-      <dt class="columns three">
-        <label for="JobTitle">Your Name/Company Name</label>
-      </dt>
-      <dd class="columns nine">
-        <input type="text" id="JobTitle">
-      </dd>
-    </dl>
-    <dl class="form row">
-      <dt class="columns three">
-        <label for="JobTitle">Website</label>
-      </dt>
-      <dd class="columns nine">
-        <input type="text" id="JobTitle" placeholder="http://www.website.com">
-      </dd>
-    </dl>
-
-    <dl class="form row">
-      <dt class="columns three">
-        <label for="JobTitle">Logo (gif, jpg, png)</label>
-      </dt>
-      <dd class="columns nine">
-        <input type="file" id="">
-      </dd>
-    </dl>
-
-    <dl class="form row">
-      <dt class="columns three">
-        <p>Terms</p>
-      </dt>
-      <dd class="columns nine">
-        <label><input type="checkbox" id=""> I understand that my listing may be removed if it is for a position that involves adult content, an illegitimate work opportunity, or an incorrect job type (i.e. freelance when it should be listed as full-time).</label>
-      </dd>
-    </dl>
-    
-    <div class="row submit">
-      <div class="columns push-three">
-        <button class="button">Preview</button> <button class="button button-secondary">Save Draft</button>
+      <div class="control-group">
+      <label class="control-label" for="JobTitle">Job Type</label>
+      <div class="controls">
+          <label class="radio inline"><input type="radio" id="" name="jobtype"> Full-time</label>
+          <label class="radio inline"><input type="radio" id="" name="jobtype"> Part-time</label>
+          <label class="radio inline"><input type="radio" id="" name="jobtype"> Freelance</label>
+          <label class="radio inline"><input type="radio" id="" name="jobtype"> Internship</label>
       </div>
     </div>
-    
-    
-    
-  
+
+
+    <div class="control-group">
+      <label class="control-label" for="JobTitle">Job Category</label>
+      <div class="controls">
+        <select class="job_cat" id="job_term_cat" name="job_term_cat">
+        <option value="">Select a category…</option>
+        <option value="86" class="level-0">Back-end Development</option>
+        <option value="88" class="level-0">Content Strategy</option>
+        <option value="85" class="level-0">Front-end Development</option>
+        <option value="87" class="level-0">Information Architecture</option>
+        <option value="89" class="level-0">Management</option>
+        <option value="89" class="level-0">Accounting</option>
+        <option value="84" class="level-0">Software Development</option>
+        <option value="80" class="level-0">Web design</option>
+      </select>
+      </div>
+    </div>
+
+
+    <div class="control-group">
+      <label class="control-label" for="JobTitle">Job Title</label>
+      <div class="controls">
+        <input type="text" id="JobTitle" class="span5">
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="JobTitle">Job Description</label>
+      <div class="controls">
+        <textarea id="" cols="30" rows="10" class="span5"></textarea>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="JobTitle">How to apply</label>
+      <div class="controls">
+          <div class="input-prepend">
+              <div class="btn-group">
+                <button data-toggle="dropdown" class="btn dropdown-toggle">Email <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Email</a></li>
+                  <li><a href="#">URL</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <input type="text" id="prependedDropdownButton" class="span3">
+            </div>
+        <label><strong>Instructions</strong></label>
+        <textarea id="" cols="30" rows="5" class="span5"></textarea>
+      </div>
+    </div>
+
+    </fieldset>
+
+
+    <fieldset>
+      <legend>Company Details</legend>
+
+      <div class="control-group">
+        <label class="control-label" for="JobTitle">Company Type</label>
+        <div class="controls">
+          <select id="comptype" name="comptype">
+            <option value="">Choose a type...</option>
+            <option value="1">Startup</option>
+            <option value="2">Studio</option>
+            <option value="3">Small business</option>
+            <option value="4">Mid-sized business</option>
+            <option value="5">Large organization</option>
+            <option value="6">Educational institution</option>
+            <option value="7">Non-profit</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label" for="JobTitle">Your Name/Company Name</label>
+        <div class="controls">
+          <input type="text" id="JobTitle" class="span4">
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label" for="JobTitle">Website</label>
+        <div class="controls">
+          <input type="text" id="JobTitle" class="span4">
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label" for="JobTitle">Logo (gif, jpg, png)</label>
+        <div class="controls">
+          <input type="file" id="">
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Terms</legend>
+      <p><label class="checkbox"><input type="checkbox" id=""> I understand that my listing may be removed if it is for a position that involves adult content, an illegitimate work opportunity, or an incorrect job type (i.e. freelance when it should be listed as full-time).</label>
+      </p>
+    </fieldset>
+
+
+
+    <div class="submit">
+      <div class="columns push-three">
+        <button class="btn btn-primary">Preview</button> <button class="btn btn-secondary">Save Draft</button>
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+
+  <div class="span4">
+    <h2>Post a Job</h2>
+    <p>Make your jobs available to thousands of elite professionals and students in Singapore and around the world. And its Free.</p>
   </div>
 </div>

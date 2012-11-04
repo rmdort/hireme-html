@@ -6,7 +6,7 @@ $legacy-support-for-mozilla: false;
 
 // Import the normalize plugin
 @import "modular-scale";
-@import "normalize";
+//@import "normalize";
 
 // Import Compass Mixins
 
@@ -22,6 +22,7 @@ $legacy-support-for-mozilla: false;
 @import "site/variables";
 @import "patterns/mixins";
 
+/*
 @import "patterns/base";
 @import "patterns/fonts";
 @import "patterns/grids";
@@ -32,12 +33,19 @@ $legacy-support-for-mozilla: false;
 @import "patterns/lists";
 @import "patterns/animation";
 @import "patterns/print";
+*/
+
+@import "vendor/bootstrap.css";
+//@import "compass_twitter_bootstrap_responsive";
 
 // Site Specific
 
 @import "vendor/zocial.css";
+
+
 @import "site/site";
 @import "site/typography";
+
 
 // Include Media Queries
 

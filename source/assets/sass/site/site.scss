@@ -1,208 +1,91 @@
-/* User Access Section */
+/* Body */
 
-$border-color: #eee;
+body{
+  padding-top: 40px;
 
-%boxedborder{
-  background:#fff;
-  padding:20px;
-  @include box-shadow(0px 0px 0px 3px #e8e8e8);
-  @include border-radius();
-  border:1px #ccc solid;
-}
-
-/* Social */
-
-.zocial{
-  min-width:175px;
-}
-
-/* Access Screen */
-
-.content{  
-  
-  @extend %boxedborder;
-  
-  margin:0 auto $base-margin*2 auto;
-  
-  
   @include respond-to(mobile){
-    padding:30px 0;
+    padding-top: 0;
   }
+}
+
+.wrapper{
+  padding: 30px 0 40px 0;
+}
+
+/* NaV */
+
+.navbar{
+  .nav{
+    float: right;
+
+    @include respond-to(mobile){
+      float: none;
+    }
+  }
+}
+
+.brand{
+  margin: -3px 0;
+}
+
+/* Content */
+
+.content{
+  background:#fff;
+  border: 1px #ddd solid;
+  padding: 15px;
+
+  @include border-radius();
 }
 
 .access{
-  width:600px;
-  margin:0 auto;
+  width: 600px;
+  margin: 0 auto;
 
-  .row{
-    max-width:auto;
-    min-width:0;
-  }
-  
-  .content > .row > .columns{
-    border-left:1px $border-color solid;
-  }
-  
-  .content > .row > .columns:first-child{
-    border-left:none;
-  }
-  
-  h2{
-    text-align:center;
-    padding-bottom:0.5em;
-  }
-  
   h3{
-    font-size:ms(1);
-    margin-bottom:$base-margin;
-    color:#444;
+    padding-bottom: 20px;
   }
-  
-  p{
-    margin-bottom:1em;
+  h2{
+    text-align: center;
+    padding-bottom: 15px;
+    display: none;
   }
-  
-  @include respond-to(mobile){
-    width:auto;
-    margin-left:15px;
-    margin-top:15px;
-    margin-right:15px;
-    padding-left:0;
-    padding-right:0;
-    
-    h3{
-      margin-bottom:15px;
-    }
-    
-    .content > .row > .columns{
-      border:none;
-    }
-    .content > .row > .columns:first-child{
-      border-bottom:1px $border-color solid;
-      margin-bottom:$base-margin;
-    }
-    
-  }
-  
-  .forgot{
-    font-size:0.9em;
-  }  
-  
 }
 
 .submit{
-  padding:2em 0;
+  padding: 20px 0 0 0;
 }
 
-/* Notice */
-
-.module{
-  margin-bottom:$base-margin;
+legend{
+  margin-bottom: 15px;
+  padding-top: 10px;
 }
 
-.notice{
-  background:#8ABA42;
-  color:#fff;
-  @include border-radius();
-  padding:0.5em 1em;
+.btn-group{
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-size: 0;
 }
 
-/* Branding */
-
-#Branding{
-  border-bottom:1px #d1d1d1 solid;
-  @include box-shadow(0 0 0 3px #eee);
-  background:#fff;
-  padding:5px 0;
-  overflow:hidden;
-  margin-bottom:3em;
-  position:fixed;
-  width:100%;
-  top:0;
-  z-index: 1;
-  
-  ul{float:right; margin:0; padding:0 2em;}
-  li{display:inline; margin:0;}
-  
-  @include respond-to(mobile){
-    position:relative;
-  }
-  
-  li > a{
-    padding:1em;    
-    display:inline-block;
-  }
-  
-  li > a:hover{
-    background:#eee;    
-  }
+.input-append, .input-prepend{
+  font-size: 0;
+  margin-bottom: 5px !important;
 }
 
-body{
-  padding-top:95px;
-  
-  @include respond-to(mobile){
-    padding-top:0;
-  }
+/* Zosial Buttons */
+
+.zocial{
+  min-width:180px;
 }
-
-/* Post a Job */
-
-.jobtypes{
-  list-style:none;
-  padding:0 0 $base-margin 0;
-  margin:0;
-  overflow:hidden;
-  
-  > li{
-    @include box-sizing(border-box);
-    width:25%;
-    
-    float:left;
-    border:1px #eee solid;
-  }
-  label{
-    padding:20px;
-  }
-}
-
-/* Job Listing */
-
-.joblist{
-  list-style:none;  margin:0; padding-bottom:20px;
-  li{ border-bottom:1px #ddd solid; margin:0;}
-  a, a:visited{
-    padding:5px; 
-    display:block;
-    @include clearfix();
-  }
-  
-  img, .title{float:left; margin-right:20px;}
-  .type{float:right;}
-  h3{font-size:1.3em;}
-  h4{font-size:1.3em;}
-}
-
-.searchForm{  
-  @extend %boxedborder;
-  padding:20px;
-  
-  select, ul{margin:0;}
-}
-
-.intro{
-  padding-bottom:20px;
-}
-
 
 /* Footer */
 
-footer{
-  border-top:1px #ddd solid;
-  padding:2em 2em;
-  text-align:center;
-}
+#footer{
+  background:#F5F5F5;
+  padding: 30px 10px;
 
-.copy{
-  color:#888;
+  @include respond-to(mobile){
+    margin: 0 -20px;
+  }
 }

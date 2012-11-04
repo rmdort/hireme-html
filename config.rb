@@ -30,8 +30,8 @@ end
 # page "/path/to/file.html", :layout => false
 #
 # With alternative layout
-page "/login.html", :layout => :plain
-page "/register.html", :layout => :plain
+#page "/login.html", :layout => :plain
+#page "/register.html", :layout => :plain
 #
 # A path which all have the same layout
 # with_layout :admin do
