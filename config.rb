@@ -36,9 +36,9 @@ end
 #page "/register.html", :layout => :plain
 #
 # A path which all have the same layout
-# with_layout :admin do
-#   page "/admin/*"
-# end
+with_layout :plain do
+   page "/ajax/*"
+ end
 
 # Proxy (fake) files
 # page "/this-page-has-no-template.html", :proxy => "/template-file.html" do

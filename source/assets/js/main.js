@@ -33,6 +33,15 @@
 
 		});
 
+		/* Popup Links */
+
+		$('.grid-columns').on('click', 'a', function(e){
+
+			$.facebox({ ajax: this.getAttribute('data-ajax-url') || '/ajax/job-details.html' });
+
+			e.preventDefault();
+		});
+
 	});
 
 })(jQuery, window)
