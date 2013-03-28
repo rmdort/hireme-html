@@ -18,3 +18,7 @@ body{
 	float: left;
 	margin: 0 $base-margin $base-margin 0;
 }
+
+.clearfix{
+	@extend %clearfix;
+}

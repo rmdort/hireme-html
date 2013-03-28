@@ -16,6 +16,57 @@
   @extend %stitch-clearfix;
 }
 
+/* No List Style */
+
+@mixin nolist{
+  list-style: none;
+  margin-left:0;
+  padding-left:0;
+}
+
+// Font Size
+
+$rem-ratio: $base-font-size / 1rem;
+$base-rem-ratio: 10px/1rem;
+
+@mixin rem($key,$px) {
+  #{$key}: $px;
+  #{$key}: $px/$base-rem-ratio;
+}
+
+@mixin font-size($sizeValue: 16){
+  font-size: ($sizeValue * 1) + px;
+  font-size: $sizeValue / 10 + rem;
+}
+
+// Site Specific: Theme Switching
+
+@mixin switch($theme, $yes, $no){
+  @if $theme == dark{
+
+  }
+  @else {
+
+  }
+}
+
+// Position
+
+@mixin position($pos: relative, $where: top){
+  position: $pos;
+  width:100%;
+  @if $where == top {
+    top: 0;
+  }
+  @else {
+    bottom: 0;
+  }
+
+  @include respond-to(mobile-tablet){
+    position:relative;
+  }
+}
+
 // Clearfix
 
 @mixin clearfix {
@@ -49,8 +100,8 @@
 
 // Convert Pixel to Em
 
-@function calc-em($target-px, $context) {
-  @return ($target-px / $context) * 1em;
+@function calc-em($target-px) {
+  @return ($target-px / 16px) * 1em;
 }
 
 // Media Queries Mixin
@@ -58,13 +109,16 @@
 
 @mixin respond-to($media) {
   @if $media == mobile {
-    @media only screen and (max-width: 767px) { @content; }
+    @media only screen and (max-width: 480px) { @content; }
   }
   @else if $media == mobile-portrait {
     @media only screen and (max-width : 320px) { @content; }
   }
   @else if $media == mobile-landscape {
     @media only screen and (max-width : 480px) { @content; }
+  }
+  @else if $media == mobile-tablet {
+    @media only screen and (max-width : 767px) { @content; }
   }
   @else if $media == mobile-wide {
     @media only screen and (min-width: 480px) and (max-width: 767px) { @content; }

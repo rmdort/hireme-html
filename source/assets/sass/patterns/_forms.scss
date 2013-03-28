@@ -43,20 +43,19 @@ label{
 .form{
   padding-bottom:5px;
   dd{ padding-bottom:5px;}
-  
+
   @include respond-to(mobile){
     .columns, .row .columns{
       padding-bottom:0;
     }
   }
-  
+
 }
 
 // Field Set
 
 fieldset{
   padding:$form-margin;
-  padding-bottom:0;
   margin:0 0 $form-margin 0;
   border:1px #ccc solid;
   @include border-radius;

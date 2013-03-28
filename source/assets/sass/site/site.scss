@@ -1,208 +1,166 @@
-/* User Access Section */
+/* Base */
 
-$border-color: #eee;
-
-%boxedborder{
-  background:#fff;
-  padding:20px;
-  @include box-shadow(0px 0px 0px 3px #e8e8e8);
-  @include border-radius();
-  border:1px #ccc solid;
+html{
+  //background:url(../img/grey_wash_wall.png);
+  background:#f1f1f1;
 }
 
-/* Social */
 
-.zocial{
-  min-width:175px;
+/* Grid Columns */
+
+.grid-columns{
+  position: relative;
+  margin: 1.5rem 2rem;
+  padding-top: 10px;
+  //margin: 0 0px;
 }
 
-/* Access Screen */
-
-.content{  
-  
-  @extend %boxedborder;
-  
-  margin:0 auto $base-margin*2 auto;
-  
-  
-  @include respond-to(mobile){
-    padding:30px 0;
-  }
-}
-
-.access{
-  width:600px;
-  margin:0 auto;
-
-  .row{
-    max-width:auto;
-    min-width:0;
-  }
-  
-  .content > .row > .columns{
-    border-left:1px $border-color solid;
-  }
-  
-  .content > .row > .columns:first-child{
-    border-left:none;
-  }
-  
-  h2{
-    text-align:center;
-    padding-bottom:0.5em;
-  }
-  
-  h3{
-    font-size:ms(1);
-    margin-bottom:$base-margin;
-    color:#444;
-  }
-  
-  p{
-    margin-bottom:1em;
-  }
-  
-  @include respond-to(mobile){
-    width:auto;
-    margin-left:15px;
-    margin-top:15px;
-    margin-right:15px;
-    padding-left:0;
-    padding-right:0;
-    
-    h3{
-      margin-bottom:15px;
-    }
-    
-    .content > .row > .columns{
-      border:none;
-    }
-    .content > .row > .columns:first-child{
-      border-bottom:1px $border-color solid;
-      margin-bottom:$base-margin;
-    }
-    
-  }
-  
-  .forgot{
-    font-size:0.9em;
-  }  
-  
-}
-
-.submit{
-  padding:2em 0;
-}
-
-/* Notice */
-
-.module{
-  margin-bottom:$base-margin;
-}
-
-.notice{
-  background:#8ABA42;
-  color:#fff;
-  @include border-radius();
-  padding:0.5em 1em;
-}
-
-/* Branding */
-
-#Branding{
-  border-bottom:1px #d1d1d1 solid;
-  @include box-shadow(0 0 0 3px #eee);
-  background:#fff;
-  padding:5px 0;
-  overflow:hidden;
-  margin-bottom:3em;
-  position:fixed;
-  width:100%;
-  top:0;
-  z-index: 1;
-  
-  ul{float:right; margin:0; padding:0 2em;}
-  li{display:inline; margin:0;}
-  
-  @include respond-to(mobile){
-    position:relative;
-  }
-  
-  li > a{
-    padding:1em;    
-    display:inline-block;
-  }
-  
-  li > a:hover{
-    background:#eee;    
-  }
-}
-
-body{
-  padding-top:95px;
-  
-  @include respond-to(mobile){
-    padding-top:0;
-  }
-}
-
-/* Post a Job */
-
-.jobtypes{
-  list-style:none;
-  padding:0 0 $base-margin 0;
-  margin:0;
-  overflow:hidden;
-  
-  > li{
+  .pin {
+    background: none repeat scroll 0 0 #FEFEFE;
+    border: 2px solid #FAFAFA;
+    box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+    display: inline-block;
+    margin: 0 2px 15px;
+    opacity: 1;
+    padding: 15px 10px;
     @include box-sizing(border-box);
-    width:25%;
-    
-    float:left;
-    border:1px #eee solid;
+    transition: all 0.2s ease 0s;
+    width: 250px;
+
+    h3{
+      @include font-size(13);
+      font-family: $base-font-family;
+      font-weight: 700;
+    }
+
+    h4{
+      @include font-size(12);
+    }
   }
+
+  .grid-column-wrapper{
+    margin-left: -10px;
+    position: relative;
+  }
+
+/* List Style */
+
+.job-type, .job-category, .user-list{
+  @extend .list-inline;
+}
+
+/* Mast */
+
+.mast{
+  position: fixed;
+  z-index: 1;
+  background:#fff;
+  @include box-shadow(0 3px 4px rgba(0,0,0,0.1));
+  top: 60px;
+  padding: 0;
+  width: 100%;
+}
+
+.container{
+    padding: 1.5rem 2rem;
+}
+
+/* Layout */
+
+.content{
+  margin: 30px auto auto;
+}
+
+
+/* Fixes Filter Bar to the Top of the page */
+
+.fixed {
+  .filters{
+    top: 0;
+    position: fixed;
+    z-index: 1;
+  }
+
+  .grid-columns{
+    padding-top: 77px;
+  }
+}
+
+
+/* Header */
+
+.branding{
+  z-index: 2;
+  padding: 0;
+  height: 60px;
+  top: 0;
+  position: relative;
+
+  li{
+    margin-left: 1rem
+  }
+}
+
+/* Filters */
+
+.filters{
+
+  background:#fff;
+  @include box-shadow(0 3px 4px rgba(0,0,0,0.1));
+  padding: 0;
+  width: 100%;
+
+  ul{
+    margin: 0;
+  }
+
+  .post &{
+    display: none;
+  }
+}
+
+/* Job Category */
+
+.job-category{
+
+
+  form, select{
+    display: inline;
+    margin: 0;
+  }
+
+  input[type="text"]{
+    width: 200px;
+    margin: 0;
+    padding: 3px 6px;
+  }
+
   label{
-    padding:20px;
+    vertical-align: middle;
+    margin-right: 1rem;
   }
 }
 
-/* Job Listing */
+/* Job Type */
 
-.joblist{
-  list-style:none;  margin:0; padding-bottom:20px;
-  li{ border-bottom:1px #ddd solid; margin:0;}
-  a, a:visited{
-    padding:5px; 
-    display:block;
-    @include clearfix();
+.job-type{
+  display: inline-block;
+  a{
+    display: inline-block;
+    position: relative;
   }
-  
-  img, .title{float:left; margin-right:20px;}
-  .type{float:right;}
-  h3{font-size:1.3em;}
-  h4{font-size:1.3em;}
-}
 
-.searchForm{  
-  @extend %boxedborder;
-  padding:20px;
-  
-  select, ul{margin:0;}
-}
+  a:hover:after{
+    content:'↓';
+    position: absolute;
+    left: 50%;
+    font-size:20px;
+    color: #666;
+    margin-left: -4px;
+    bottom: -20px;
+  }
 
-.intro{
-  padding-bottom:20px;
-}
-
-
-/* Footer */
-
-footer{
-  border-top:1px #ddd solid;
-  padding:2em 2em;
-  text-align:center;
-}
-
-.copy{
-  color:#888;
+  li{
+    margin-right: 2rem;
+  }
 }

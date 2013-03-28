@@ -1,14 +1,12 @@
----
-title: Post a Job
----
+<div class="post-job content">
 
-<div class="row">
-  
-  <div class="columns twelve">
-    
-    <h1>Post a job</h1>
-    
-    
+  <h1>Post a Job</h1>
+
+  <p> HasGeek reaches out to thousands of developers via events, blogs and discussion groups. Job listings made here will be shown across the network. Listings are valid for 30 days. Each job listing must be for one position only and must comply with the terms of service. </p>
+
+  <fieldset>
+    <h2>Job Details</h2>
+
     <ul class="jobtypes">
       <li><label><input type="radio" id="" name="jobtype"> Full-time</label></li>
       <li><label><input type="radio" id="" name="jobtype"> Part-time</label></li>
@@ -18,30 +16,43 @@ title: Post a Job
 
     <dl class="form row">
       <dt class="columns three">
-        <label for="JobTitle">Job Category</label>
-      </dt>
-      <dd class="columns nine">
-        <select class="job_cat" id="job_term_cat" name="job_term_cat"><option value="">Select a category…</option>
-        	<option value="86" class="level-0">Back-end Development</option>
-        	<option value="88" class="level-0">Content Strategy</option>
-        	<option value="85" class="level-0">Front-end Development</option>
-        	<option value="87" class="level-0">Information Architecture</option>
-        	<option value="89" class="level-0">Management</option>
-        	<option value="89" class="level-0">Accounting</option>
-        	<option value="84" class="level-0">Software Development</option>
-        	<option value="80" class="level-0">Web design</option>
-        </select>         
-      </dd>
-    </dl>
-
-    <dl class="form row">
-      <dt class="columns three">
         <label for="JobTitle">Job Title</label>
       </dt>
       <dd class="columns nine">
         <input type="text" id="JobTitle">
       </dd>
     </dl>
+
+    <dl class="form row">
+      <dt class="columns three">
+        <label for="Location">Location</label>
+      </dt>
+      <dd class="columns nine">
+        <input type="text" id="Location">
+        <p><em>“Bangalore”, “Chennai”, “Pune”, etc or “Anywhere” (without quotes)</em></p>
+      </dd>
+    </dl>
+
+    <dl class="form row">
+      <dt class="columns three">
+        <label for="JobTitle">Job Category</label>
+      </dt>
+      <dd class="columns nine">
+        <select name="" id="">
+            <option>Front-end Development</option>
+            <option>Back-end Development</option>
+            <option>Mobile (iPhone, Android, other)</option>
+            <option>Interaction Design</option>
+            <option>Graphics Design</option>
+            <option>Content Strategy</option>
+            <option>Information Architecture</option>
+            <option>Customer Support</option>
+            <option>Management</option>
+            <option>Accounting</option>
+          </select>
+      </dd>
+    </dl>
+
 
     <dl class="form row">
       <dt class="columns three">
@@ -58,29 +69,15 @@ title: Post a Job
       </dt>
       <dd class="columns nine">
         <textarea id="" cols="30" rows="10"></textarea>
+        <p> Example: "Send a resume to kumar@company.com". Don’t worry about spambots seeing your email address. We’ll secure it</p>
       </dd>
     </dl>
 
+  </fieldset>
 
-    <h2>Company Details</h2>
+  <fieldset>
+    <h2>Tell us about your company</h2>
 
-    <dl class="form row">
-      <dt class="columns three">
-        <label for="JobTitle">Company Type</label>
-      </dt>
-      <dd class="columns nine">
-        <select id="comptype" name="comptype">
-          <option value="">Choose a type...</option>
-          <option value="1">Startup</option>
-          <option value="2">Studio</option>
-          <option value="3">Small business</option>
-          <option value="4">Mid-sized business</option>
-          <option value="5">Large organization</option>
-          <option value="6">Educational institution</option>
-          <option value="7">Non-profit</option>
-        </select>
-      </dd>
-    </dl>
 
     <dl class="form row">
       <dt class="columns three">
@@ -88,6 +85,7 @@ title: Post a Job
       </dt>
       <dd class="columns nine">
         <input type="text" id="JobTitle">
+        <p> The name of the organization where the position is. No intermediaries or unnamed stealth startups. Use your own real name if the company isn’t named yet. We do not accept listings from third parties such as recruitment consultants. Such listings may be removed without notice</p>
       </dd>
     </dl>
     <dl class="form row">
@@ -105,6 +103,7 @@ title: Post a Job
       </dt>
       <dd class="columns nine">
         <input type="file" id="">
+        <p> Optional — Your company logo will appear at the top of your listing. 170px wide is optimal. We’ll resize automatically if it’s wider</p>
       </dd>
     </dl>
 
@@ -116,15 +115,25 @@ title: Post a Job
         <label><input type="checkbox" id=""> I understand that my listing may be removed if it is for a position that involves adult content, an illegitimate work opportunity, or an incorrect job type (i.e. freelance when it should be listed as full-time).</label>
       </dd>
     </dl>
-    
+
+    <h3>Is it okay for recruiters and other intermediaries to contact you about this listing?</h3>
+    <ul class="list-inline">
+      <li>
+        <label><input type="radio" name="recruiter" id=""> No, it is NOT OK</label>
+      </li>
+      <li>
+        <label><input type="radio" name="recruiter" id=""> Yes, recruiters may contact me</label>
+      </li>
+    </ul>
+
+  </fieldset>
+
+  <fieldset>
     <div class="row submit">
       <div class="columns push-three">
         <button class="button">Preview</button> <button class="button button-secondary">Save Draft</button>
       </div>
     </div>
-    
-    
-    
-  
-  </div>
+  </fieldset>
+
 </div>

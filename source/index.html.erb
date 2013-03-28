@@ -1,63 +1,9 @@
 
-<div class="row">
-  <div class="columns twelve">
-    <div class="intro">
-      <h1>Hireme is where companies and creative professionals meet to make a better web.</h1>
+  <section class="jobs grid-columns">
+    <div class="grid-column-wrapper">
+      <%= partial "partials/single-job" %>
+      <%= partial "partials/single-job" %>
+      <%= partial "partials/single-job" %>
+
     </div>
-  </div>
-</div>
-
-
-<div class="row">
-  <div class="columns eight">
-    
-    <!-- Form -->
-    <form action="" class="searchForm">
-      <div class="row">
-        <div class="columns ten">
-          <input type="text" id="">
-        </div>
-        <div class="columns two">
-          <button class="button">Search</button>
-        </div>
-      </div>
-      
-      <div class="row">
-        <div class="columns four">
-          <select class="job_cat" id="job_term_cat" name="job_term_cat"><option value="">All Jobs</option>
-          	<option value="86" class="level-0">Back-end Development</option>
-          	<option value="88" class="level-0">Content Strategy</option>
-          	<option value="85" class="level-0">Front-end Development</option>
-          	<option value="87" class="level-0">Information Architecture</option>
-          	<option value="89" class="level-0">Management</option>
-          	<option value="89" class="level-0">Accounting</option>
-          	<option value="84" class="level-0">Software Development</option>
-          	<option value="80" class="level-0">Web design</option>
-          </select>
-        </div>
-        <div class="columns eight">
-          <ul class="list-inline">
-            <li><label><input type="radio" id="" name="jobtype"> Full-time</label></li>
-            <li><label><input type="radio" id="" name="jobtype"> Part-time</label></li>
-            <li><label><input type="radio" id="" name="jobtype"> Freelance</label></li>
-            <li><label><input type="radio" id="" name="jobtype"> Internship</label></li>
-          </ul>
-        </div>
-      </div>
-      
-      
-    </form>
-    <!-- / Form -->
-    
-    <ul class="joblist">
-      <%= partial "partials/joblisting" %>
-    </ul>
-    
-  </div>
-  <div class="columns four">
-    
-    <h2>Post a Job</h2>
-    <p>Make your jobs available to thousands of elite professionals and students in Singapore and around the world. And its Free.</p>
-    
-  </div>
-</div>
+  </section>
